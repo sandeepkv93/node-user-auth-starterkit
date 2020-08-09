@@ -1,0 +1,42 @@
+@baseUrl = http://localhost:3000
+
+### Basic route test
+GET {{baseUrl}} HTTP/1.1
+
+### Register a new user
+POST {{baseUrl}}/api/users/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "mikhail",
+    "password": "Fb2;:}$'FDwfk]#S",
+    "firstname": "Mikhail",
+    "lastname": "Varshavski",
+    "email": "doctor.mike@gmail.com",
+    "phone": "7188250968",
+    "role": "doctor",
+    "gender": "male",
+    "dob": "1995-12-17"
+}
+
+### Login with username and password
+# @name login
+POST {{baseUrl}}/api/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "mikhail",
+    "password": "Fb2;:}$'FDwfk]#S"
+}
+
+### Get all users. Add access only to admins later
+GET {{baseUrl}}/api/users HTTP/1.1
+Authorization: Bearer {{login.response.body.accessToken}}
+
+### new access token from refresh token
+POST {{baseUrl}}/api/users/token HTTP/1.1
+Content-Type: application/json
+
+{
+    "token": "{{login.response.body.refreshToken}}"
+}

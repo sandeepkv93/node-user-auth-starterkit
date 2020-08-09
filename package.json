@@ -5,7 +5,7 @@
     "main": "server.js",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/sandeepkv93/doctory-helper.git"
+        "url": "git+https://github.com/com:DocHelper/doctory-helper.git"
     },
     "keywords": [
         "doctor",
@@ -20,9 +20,9 @@
     "author": "sandeepkv93, chemaddul",
     "license": "GPL-3.0-or-later",
     "bugs": {
-        "url": "https://github.com/sandeepkv93/doctory-helper/issues"
+        "url": "https://github.com/com:DocHelper/doctory-helper/issues"
     },
-    "homepage": "https://github.com/sandeepkv93/doctory-helper#readme",
+    "homepage": "https://github.com/com:DocHelper/doctory-helper#readme",
     "private": true,
     "scripts": {
         "devStart": "nodemon server.js",
