@@ -1,1 +1,1 @@
-# doctory-helper
+# Node User Authentication Starter Kit
